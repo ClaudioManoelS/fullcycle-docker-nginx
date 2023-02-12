@@ -1,6 +1,6 @@
 
 ## Instrução para rodar os containers
->docker-compose up -d \
+>docker-compose up -d
 >
 >Com os containers rodando, vá até a url localhost:8080
 >
