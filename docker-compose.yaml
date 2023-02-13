@@ -7,7 +7,7 @@ services:
     container_name: db
     restart: always
     tty: true
-    volumes:
+    volumes: 
       - ./mysql:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=challengedb
@@ -19,7 +19,7 @@ services:
     build:
       context: node
     container_name: app
-    entrypoint: dockerize -wait tcp://db:3306 -timeout 50s docker-entrypoint.sh node index.js
+    entrypoint: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh node index.js
     tty: true
     networks:
       - challengenet
